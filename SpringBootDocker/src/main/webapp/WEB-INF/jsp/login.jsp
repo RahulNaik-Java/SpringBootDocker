@@ -13,10 +13,10 @@
 		    <table>
 		    <tr><td><h2>Login Page</h2></td></tr>
 				<tr>
-				  <td>Username :<input type="text" name="name" /></td><br>
+				  <td>Username :<input type="text" name="name" required /></td><br>
 				</tr>
 				 <tr>
-				   <td>Password : <input type="password" name="password" /></td>
+				   <td>Password : <input type="password" name="password" required /></td>
 				 </tr><br>
 				<tr>
 				  <td><input type="submit" /></td>
