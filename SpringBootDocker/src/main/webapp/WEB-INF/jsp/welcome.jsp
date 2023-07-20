@@ -1,11 +1,10 @@
-<html>
-<head>
-<title>Spring Boot With Docker</title>
-</head>
+<%@include file="header.jsp" %>
 <body>
-	<div align="center">
-	    <h3 style="color:green;">Welcome ${name} !! </h3>
-		<a href="/list-todos">Click here</a> to manage your todo's.
+    <br>
+	<div class="container" align="center">
+	    <h3 style="color:purple;">Welcome, ${name} ! </h3>
+		> <a href="/list-todos">Click here</a> to manage your todo's.
 	</div>
+	<%@include file="footer.jsp" %>
 </body>
 </html>

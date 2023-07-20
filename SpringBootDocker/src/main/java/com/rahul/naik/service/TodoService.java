@@ -16,10 +16,10 @@ public class TodoService {
 
     static {
     	
-        todos.add(new Todo(1, "java", "Learn Spring MVC", new Date(),
+        todos.add(new Todo(1, "Rahul", "Learn Spring", new Date(),
                 false));
-        todos.add(new Todo(2, "java", "Learn Struts", new Date(), false));
-        todos.add(new Todo(3, "java", "Learn Hibernate", new Date(),
+        todos.add(new Todo(2, "Vinod", "Learn Struts", new Date(), false));
+        todos.add(new Todo(3, "Mallikarjun", "Learn Hibernate", new Date(),
                 false));
     }
   

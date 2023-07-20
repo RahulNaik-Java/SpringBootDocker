@@ -1,14 +1,34 @@
-<html>
-<head>
-<title>Spring Boot With Docker</title>
-</head>
+<%@include file="header.jsp" %>
 <body>
-	<br>
-	<div align="left">
-		<h3 style="color:purple;">List of Your Todos:</h3>
-		<li>${todos}</li>
-		<br>
-		<a href="/welcome">Go Back</a><br><br>
-	</div>
+
+	<div class="container mt-2">
+	  <br>
+      	<div align="left">
+      		<h3 style="color:dark;">List of Your Todos:</h3>
+      		<br>
+      		<a href="/welcome" type="button" class="btn btn-primary">Go Back</a><br><br>
+      	</div>
+      <table class="table">
+        <thead class="table-success">
+          <tr>
+            <th>ID</th>
+            <th>User</th>
+            <th>Description</th>
+            <th>Target Date</th>
+          </tr>
+        </thead>
+        <tbody>
+            <c:forEach var="todo" items="${todos}">
+              <tr>
+                <td>${todo.id}</td>
+                <td>${todo.user}</td>
+                <td>${todo.desc}</td>
+                <td>${todo.targetDate}</td>
+              </tr>
+            </c:forEach>
+        </tbody>
+      </table>
+    </div>
+	<%@include file="footer.jsp" %>
 </body>
 </html>
