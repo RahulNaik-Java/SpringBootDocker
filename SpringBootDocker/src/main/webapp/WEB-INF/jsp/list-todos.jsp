@@ -6,7 +6,7 @@
       	<div align="left">
       		<h3 style="color:dark;">List of Your Todos:</h3>
       		<br>
-      		<a href="/welcome" type="button" class="btn btn-primary">Go Back</a><br><br>
+      		<a href="/welcome" type="button" class="btn btn-warning btn-sm">Go Back</a><br><br>
       	</div>
       <table class="table">
         <thead class="table-success">
