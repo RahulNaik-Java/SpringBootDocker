@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    tools {
+        maven "3.9.3"
+        jdk "open-jdk-19.0.2"
+    }
     stages {
         stage('Build Application') {
             steps {
