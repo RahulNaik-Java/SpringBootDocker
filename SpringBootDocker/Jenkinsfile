@@ -1,8 +1,8 @@
 pipeline {
     agent any
     tools {
-        maven "local"
-        jdk "local_java_19"
+            maven "local"
+            jdk "local_java_19"
     }
     stages {
         stage('Build Application') {
@@ -16,22 +16,23 @@ pipeline {
                 }
             }
         }
-        stage('Deploy Application in Staging Environment') {
-            steps {
+        stage('Deploy in Staging Environment'){
+            steps{
                 build job: 'Deploy_Appln_To_Stage_Env'
+
             }
+
         }
-        stage('Deploy Application in Production Environment') {
-            steps {
-                  timeout(time:5, unit:'DAYS') {
-                       input message:'Approve PRODUCTION Deployment?'
-                    }
-                  build job: 'Deploy_Appln_To_Prod_Env'
+        stage('Deploy to Production'){
+            steps{
+                timeout(time:5, unit:'DAYS'){
+                    input message:'Approve PRODUCTION Deployment?'
+                }
+                build job: 'Deploy_Appln_To_Prod_Env'
             }
         }
     }
 }
-
 
 // Sample Code below
 
