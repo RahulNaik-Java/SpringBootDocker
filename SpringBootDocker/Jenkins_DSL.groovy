@@ -6,6 +6,10 @@ job('First-Maven-Project-Via-DSL') {
     triggers {
         scm('* * * * *')
     }
+    tools {
+        maven "local"
+        jdk "local_java_19"
+    }
     steps {
         maven('clean package', 'SpringBootDocker/pom.xml')
     }
